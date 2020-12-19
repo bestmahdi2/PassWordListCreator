@@ -1,5 +1,4 @@
-import itertools 
-import gc
+from itertools import product
 
 
 class passwordMaker:
@@ -53,7 +52,7 @@ class passwordMaker:
 			print(" == Creating password list for length : {} ".format(number))
 
 			holder = []											# to keep passwords
-			lister = itertools.product(combine, repeat=number)	# creat all possible passwords
+			lister = product(combine, repeat=number)			# creat all possible passwords
 
 
 			# to avoid 'memmoryError', program saves each one million password to file, because if it doesn't
